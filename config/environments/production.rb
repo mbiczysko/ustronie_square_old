@@ -36,6 +36,20 @@ Dom::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  
+  config.action_mailer.smtp_settings = {
+       :authentication => :plain,
+       :address => ENV['MAIL_ADDRESS'],
+       :port => ENV['MAIL_PORT'],
+       :domain => ENV['MAIL_DOMAIN'],
+       :user_name => ENV['MAIL_USERNAME'],
+       :password => ENV['MAIL_PASSWORD']
+  }
 
   # Enable threaded mode
   # config.threadsafe!
