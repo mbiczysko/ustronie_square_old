@@ -29,6 +29,7 @@ gem 'thin'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'sqlite3'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 # REFINERY CMS ================================================================

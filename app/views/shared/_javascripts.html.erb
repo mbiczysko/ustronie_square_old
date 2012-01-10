@@ -8,3 +8,9 @@
   <![endif]-->
 <% end %>
 <%= yield :javascripts -%>
+<script type="text/javascript"> Cufon.now(); </script> <!-- to fix cufon problems in IE browser -->
+<script type="text/javascript">jQuery('#noscript').remove();</script><!-- if javascript disable -->
+<script type="text/javascript">
+	 Cufon.replace('h1') ('h2') ('h3') ('h4') ('h5') ('h6');
+</script>
+

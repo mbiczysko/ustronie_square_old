@@ -1,7 +1,36 @@
-<h1 id='logo'>
-  <%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %>
-</h1>
-<%= render(:partial => "/shared/menu", :locals => {
-             :dom_id => 'menu',
-             :css => 'menu'
-           }) %>
+<div id="top-wrapper">
+ <div class="container">
+     <div id="top">
+     <div id="logo">
+          <% link_to  root_path, do %>
+           <img src="images/logo.gif" alt="">
+         <% end %>
+     </div><!-- #logo -->
+     <div id="mainmenu">
+       <ul class="sn">
+               <li><a href="#"><img src="images/icon/star.gif" alt=""  /></a></li>
+               <li><a href="#"><img src="images/icon/star.gif" alt=""  /></a></li>
+               <li><a href="#"><img src="images/icon/star.gif" alt=""  /></a></li>
+               <li><a href="#"><img src="images/icon/star.gif" alt=""  /></a></li>
+               <li><a href="#"><img src="images/icon/star.gif" alt=""  /></a></li>
+       </ul>
+       <%= render(:partial => "/shared/menu", :locals => {
+                    :dom_id => 'menu',
+                    :css => 'menu'
+                  }) %>
+         <div class="clear"></div>
+     </div><!-- #mainmenu -->
+     </div>
+
+     <div id="navigation">
+         <ul>
+           	<li>Zapraszamy na wspaniały wypoczynek z nami. Zapytaj o wolne pokoje używając</li>
+            <li><a href="/contact">Formularza na Stronie</a></li>
+            <li>lub wyślij</li>
+            <li><a href="mailto:pokojeumirka@interia.pl">Maila!</a>
+            </p></li>
+        </ul>
+     </div>
+ </div><!-- .container -->
+</div><!-- #top-wrapper -->
+

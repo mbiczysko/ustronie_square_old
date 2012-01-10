@@ -3,19 +3,68 @@
   <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
   <%= render :partial => "/shared/head" %>
   <body>
+
     <%= site_bar -%>
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
-      <header>
-        <%= render :partial => "/shared/header" -%>
-      </header>
-      <section id='page'>
-        <%= yield %>
-      </section>
-      <footer>
-        <%= render :partial => "/shared/footer" -%>
-      </footer>
+      <div id="outer-wrapper">
+        <header>
+          <%= render :partial => "/shared/header" -%>
+        </header>
+        <%= @page.inspect %>
+        <%= render :partial => '/shared/slider' %>
+        <div class="clear"></div>
+        <section id='page'>
+          <div id="content-wrapper">
+            <div class="container">
+                <div id="content-container">
+                <div id="frame-content-t">
+                <div id="frame-content-b">
+                    <div class="center">
+                        [.. contains the banner content ..] 
+                    </div><!-- .center -->
+
+                    <div class="clear"></div>
+                    <div class="line"></div><br />
+                    <div class="clear"></div>
+
+                    <div class="center">
+                    <div class="three-column-r">
+                        <div class="three-column-t">
+                            <div class="three-column-b">
+                                <div id="side-left">
+                                    [.. contains the sidebar left..] 
+                                </div><!-- #side-left -->
+
+                                <div id="main-content">
+                                    <%= yield %>
+                                </div><!-- #main-content -->
+
+                                <div id="side-right">
+                                    [.. contains the sidebar right..]
+                                </div><!-- #side-right -->
+                                <div class="clear"></div>
+                            </div><!-- .three-column-b -->
+                        </div><!-- .three-column-t -->
+                    </div><!-- .three-column-r -->
+                    </div><!-- .center -->
+
+                    <div class="clear"></div>
+                    </div><!-- #frame-content-b -->
+                </div><!-- #frame-content-t -->
+                </div><!-- #content-container -->
+            </div><!-- .container -->
+          </div><!-- #content-wrapper -->
+          
+        </section>
+        
+        <footer>
+          <%= render :partial => "/shared/footer" -%>
+        </footer>
+      </div>
     </div>
     <%= render :partial => "/shared/javascripts" %>
   </body>
 </html>
+
+
