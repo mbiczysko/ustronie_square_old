@@ -11,8 +11,9 @@
         <header>
           <%= render :partial => "/shared/header" -%>
         </header>
-        <%= @page.inspect %>
-        <%= render :partial => '/shared/slider' %>
+        <% if home_page? %>
+          <%= render :partial => '/shared/slider' %>
+        <% end %>
         <div class="clear"></div>
         <section id='page'>
           <div id="content-wrapper">
