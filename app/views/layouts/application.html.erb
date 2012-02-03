@@ -8,9 +8,7 @@
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
       <div id="outer-wrapper">
-        <header>
-          <%= render :partial => "/shared/header" -%>
-        </header>
+        <%= render :partial => "/shared/header" -%>
         <% if home_page? %>
           <%= render :partial => '/shared/slider' %>
         <% else %>
@@ -32,7 +30,7 @@
                     <div class="clear"></div>
 
                     <div class="center">
-                    <div class="three-column-r">
+                      <div class="three-column-r">
                         <div class="three-column-t">
                             <div class="three-column-b">
                                 <div id="side-left">
@@ -51,8 +49,8 @@
                         </div><!-- .three-column-t -->
                     </div><!-- .three-column-r -->
                     </div><!-- .center -->
-
                     <div class="clear"></div>
+                    
                     </div><!-- #frame-content-b -->
                 </div><!-- #frame-content-t -->
                 </div><!-- #content-container -->
