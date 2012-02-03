@@ -13,6 +13,8 @@
         </header>
         <% if home_page? %>
           <%= render :partial => '/shared/slider' %>
+        <% else %>
+          <%= render :partial => '/shared/noslider' %>
         <% end %>
         <div class="clear"></div>
         <section id='page'>
