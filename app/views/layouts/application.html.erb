@@ -18,7 +18,13 @@
         <section id='page'>
           <div id="content-wrapper">
             <div class="container">
-               <%= yield %>
+              <div id="content-container">
+                <div id="frame-content-t">
+                  <div id="frame-content-b">
+                      <%= yield %>
+                   </div><!-- #frame-content-b -->
+                 </div><!-- #frame-content-t -->
+               </div><!-- #content-container -->
             </div><!-- .container -->
           </div><!-- #content-wrapper -->
           
