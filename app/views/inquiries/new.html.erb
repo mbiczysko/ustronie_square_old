@@ -1,34 +1,55 @@
-<% content_for :body_content_left do %>
-  <div class='inquiries'>
-    <%=raw @page[Page.default_parts.first.to_sym] %>
+<div class="center">
+  <div id="main-content" class="full">
+    <h4>Formularz kontaktowy</h4>
+    <div class="two_third">
+		<% content_for :body_content_left do %>
+      <div class='inquiries'>
+        <%=raw @page[Page.default_parts.first.to_sym] %>
 
-    <%= form_for @inquiry do |f| %>
-      <%= render :partial => "/shared/admin/error_messages",
-                 :locals => {
-                   :object => @inquiry,
-                   :include_object_name => true
-                 } %>
-      <div class='field'>
-        <%= f.required_label :name %>
-        <%= f.text_field :name %>
-      </div>
-      <div class='field'>
-        <%= f.required_label :email %>
-        <%= f.text_field :email %>
-      </div>
-      <div class='field'>
-        <%= f.label :phone %>
-        <%= f.text_field :phone %>
-      </div>
-      <div class='field message_field'>
-        <%= f.required_label :message  %>
-        <%= f.text_area :message, :rows => 8 %>
-      </div>
-      <div class='actions'>
-        <%= f.submit t('.send') %>
-        <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if RefinerySetting.find_or_set(:show_contact_privacy_link, false) %>
+        <%= form_for @inquiry do |f| %>
+          <%= render :partial => "/shared/admin/error_messages",
+                     :locals => {
+                       :object => @inquiry,
+                       :include_object_name => true
+                     } %>
+          <div class='field'>
+            <%= f.required_label :name, "Imię" %>
+            <%= f.text_field :name %>
+          </div>
+          <div class='field'>
+            <%= f.required_label :email, "Email" %>
+            <%= f.text_field :email %>
+          </div>
+          <div class='field'>
+            <%= f.label :phone, "Telefon" %>
+            <%= f.text_field :phone %>
+          </div>
+          <div class='field message_field'>
+            <%= f.required_label :message, "Wiadomość"  %>
+            <%= f.text_area :message, :rows => 8 %>
+          </div>
+          <div class='actions'>
+            <%= f.submit "Wyślij Wiadmość", :class => "button", :id => "submit_btn" %>
+            <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if RefinerySetting.find_or_set(:show_contact_privacy_link, false) %>
+          </div>
+        <% end %>
       </div>
     <% end %>
+    <%= render :partial => "/shared/content_page" %>
+		</div><!-- end .two_third -->
+		<div class="one_third last">
+		<h4>Nasz address</h4>
+		  <p>Ul. Rolna 27/F<br/>
+		    Ustronie Morskie<br/>
+        78-111</p>
+      <h4>Dane kontaktowe:</h4>
+        <ul>
+          <li>Email: <a href="mailto:pokojemirka@interia.pl">pokojemirka@interia.pl</a></li>
+          <li>Tel: (094) 35-14-048</li>
+          <li>Kom: (048) 880-447-994 </li>
+        </ul>                
+		</div><!-- end .one_third -->
+		
+		<br class="clear" />
   </div>
-<% end %>
-<%= render :partial => "/shared/content_page" %>
+</div>
