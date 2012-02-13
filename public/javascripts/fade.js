@@ -1,12 +1,12 @@
-$(document).ready(function(){
+jQuery(document).ready(function(){
 //Set opacity on each span to 0%
 
-$('.ts-display-pf-img').hover(
+jQuery('.ts-display-pf-img').hover(
     function() {
-        $(this).find('.rollover').stop().fadeTo(500, 0.60);
+        jQuery(this).find('.rollover').stop().fadeTo(500, 0.60);
     },
     function() {
-		$(this).find('.rollover').stop().fadeTo(500, 0);
+		jQuery(this).find('.rollover').stop().fadeTo(500, 0);
     }
 )
 
