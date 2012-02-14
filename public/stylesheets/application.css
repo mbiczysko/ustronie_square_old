@@ -936,7 +936,7 @@ ul.check li{display:inline-block; margin-right:15px;}
 .cekmonth select{ width:150px;}
 
 /* ROOM DETAIL */
-.one_half.left{ margin-left:20px; width:42%;}
+/*.one_half.left{ margin-left:20px; width:42%;}
 #slideshow_detail {list-style:none; color:#fff}
 #slideshow_detail span {display:none}
 #wrapper {width:651px; margin:0; display:none; }
@@ -956,7 +956,7 @@ ul.check li{display:inline-block; margin-right:15px;}
 #slidearea {float:left; position:relative; width:570px; margin:0px 10px 0px 10px;  height:53px; overflow:hidden;}
 #slider {position:absolute; left:0; height:53px}
 #slider img {cursor:pointer; border:0px; padding:0px 0px; margin:0px 8px 0px 8px!important; width:47px; height:35px;}
-
+*/
 /* PORTFOLIO */
 .ts-display-pf-img{position:relative;}
 .ts-display-clear{clear:both; height:1px !important; line-height:1px !important; float:none!important}
