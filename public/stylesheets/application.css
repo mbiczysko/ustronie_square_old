@@ -286,7 +286,7 @@ ul.sn li {
 #menu ul {
 	position:absolute;
 	display:none;
-	width:130px;
+	width:230px;
 	top:30px;
 	left:-15px;
 	padding: 5px 10px!important;
@@ -298,7 +298,7 @@ ul.sn li {
 #menu li li{ border-bottom:1px solid #eaeaea;}
 
 #menu li ul a{
-	width:100px;
+	width:200px;
 	margin:3px 0px 3px 0px;
 	padding:5px 15px;
 	line-height:normal;
