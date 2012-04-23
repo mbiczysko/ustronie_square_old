@@ -111,12 +111,12 @@ ul.check li{display:inline-block; margin-right:15px;}
 
 .ts-display-pf-col-3 .ts-display-pf-img{
 	width:281px;
-	height:166px;
+	height:186px;
 }
 
 .ts-display-pf-col-3 .ts-display-pf-img a.image{
 	width:281px;
-	height:166px;
+	height:186px;
 	display:block;
 	position:relative;
 }
@@ -127,7 +127,7 @@ ul.check li{display:inline-block; margin-right:15px;}
 	background-repeat:no-repeat;
 	background-position:center;
 	width:281px;
-	height:166px;
+	height:186px;
 	display:block;
     position:absolute;
 	z-index:10;
