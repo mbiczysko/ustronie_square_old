@@ -1,8 +1,13 @@
-<% unless refinery_user? or
-  (page_code = RefinerySetting.find_or_set(:analytics_page_code, 'UA-xxxxxx-x').to_s.strip) =~ /^(UA-xxxxxx-x)?$/ -%>
-<!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet -->
-<script>var _gaq=[['_setAccount','<%= page_code %>'],['_trackPageview'],['_trackPageLoadTime']];(function(d,t){
-var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-g.async=1;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)
-}(document,'script'))</script>
-<% end -%>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31195550-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
